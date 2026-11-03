@@ -1,6 +1,6 @@
 # Use Cases
 
-> AI-assisted (Claude): Claude coached by asking questions and offering multiple-choice options; it formatted my chosen answers into the template. Actors, use cases, flows and choices decided by Krish.
+> AI-assisted (Claude): Claude coached by asking questions and offering multiple-choice options; it formatted my chosen answers into the template. Actors, use cases, flows 
 
 ![Use case diagram](use-case-diagram.png)
 
