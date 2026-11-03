@@ -6,10 +6,10 @@ Software Engineering Lab · HAW Hamburg · Winter 2026/27
 
 | Name | GitHub handle |
 |---|---|
-|  |  |
-|  |  |
+| Sharaf Tasnim Urbee | @urbeetasnim |
+| Krish Bhurtel | @iamkrish001 |
 
-**Group:** SEL/0_
+**Group:** SEL/03
 **Partner team:** <!-- link to your partner team's repository -->
 
 ## Where things are
