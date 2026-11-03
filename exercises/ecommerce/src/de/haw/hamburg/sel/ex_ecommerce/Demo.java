@@ -1,0 +1,67 @@
+package de.haw.hamburg.sel.ex_ecommerce;
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
+
+import de.haw.hamburg.sel.ex_ecommerce.Order;
+
+/**
+ * World first console e-commerce application.
+ */
+public class Demo {
+
+    private static Map<Integer, Integer> priceOnProducts = new HashMap<>();
+    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private static Order order = new Order();
+
+
+    static {
+        priceOnProducts.put(1, 2200);
+        priceOnProducts.put(2, 1850);
+        priceOnProducts.put(3, 1100);
+        priceOnProducts.put(4, 890);
+    }
+
+    public static void main(String[] args) throws IOException {
+        while (!order.isClosed()) {
+            int cost;
+
+            String continueChoice;
+            do {
+                System.out.print("Please, select a product:" + "\n" +
+                        "1 - Mother board" + "\n" +
+                        "2 - CPU" + "\n" +
+                        "3 - HDD" + "\n" +
+                        "4 - Memory" + "\n");
+                int choice = Integer.parseInt(reader.readLine());
+                cost = priceOnProducts.get(choice);
+                System.out.print("Count: ");
+                int count = Integer.parseInt(reader.readLine());
+                order.setTotalCost(cost * count);
+                System.out.print("Do you wish to continue selecting products? Y/N: ");
+                continueChoice = reader.readLine();
+            } while (continueChoice.equalsIgnoreCase("Y"));
+
+
+            // Order object gathers payment data
+            order.processOrder();
+
+            System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
+            String proceed = reader.readLine();
+            if (proceed.equalsIgnoreCase("P")) {
+            	// Handle payment with Paypal
+            	if (order.payWithPaypal(order.getTotalCost())) {
+                    System.out.println("Payment has been successful.");
+                } else {
+                    System.out.println("FAIL! Please, check your data.");
+                }
+                order.setClosed();
+            }
+        }
+        System.out.print("Thank you. Goodbye!");
+    }
+}

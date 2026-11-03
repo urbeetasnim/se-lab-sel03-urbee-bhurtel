@@ -1,0 +1,6 @@
+# Same line endings for everyone, whether you work on Windows, macOS or Linux
+* text=auto
+# Shell scripts must keep Unix line endings (e.g. the Maven wrapper in app/)
+mvnw text eol=lf
+*.sh text eol=lf
+*.cmd text eol=crlf
