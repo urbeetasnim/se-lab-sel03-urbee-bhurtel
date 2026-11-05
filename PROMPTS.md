@@ -17,13 +17,14 @@ Copy this block for each entry:
 
 ## Lab 1
 
-### 2026-11-03 — Claude 
-**Goal:** Understand the lab and get coaching on P1–P3.
-**Prompt:**
-> "help me prepare the lab" — then step-by-step coaching on actors, use cases, alternate flows and open questions
-**Kept / changed / rejected, and why:**
-Claude asked guiding questions and gave multiple-choice options; I picked the answers. Kept its formatting of my picks into the templates and the quotes it extracted from the emails. Rejected some of my first answers after its feedback (e.g. "developer" is not an actor, "charge late cancellations" is a rule, not a use case). Questions in open-questions.md were turned from my opinions into open questions with its help.
-> 05.11: Claude helped replace UC-03 with "Change a booking" after decision D-xx (multiple-choice picks by me).
+   ### 2026-11-05 — Claude — Urbee
+
+   **Goal:** Turn our handwritten stakeholder-session notes into the decision-log table and map each decision to our open questions.
+
+   **Prompt:**
+   > These are the answers we got from the prof in the stakeholder session: [our notes]. Rearrange the numbers according to our open-question file, then the other teams' answers.
+
+   **Kept / changed / rejected, and why:** Kept the table and wording after checking every row against our notes; added follow-up answers from the session (cancellation deadline, room changes, data retention, search time).
 
 ## Lab 2
 
