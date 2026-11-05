@@ -11,7 +11,7 @@
 | Related requirements | *(filled in the Lab 1 report)* |
 | Initiating actor | Guest |
 | Actor's goal | Secure a room in a hotel for the chosen dates |
-| Participating actors | Payment Provider; Owner (if bookings need owner approval, see Q4) |
+| Participating actors | Payment Provider|
 | Preconditions | The hotel and its rooms are offered on the platform. The guest has found a room (UC Search for a room). |
 | Postconditions | A booking for the guest exists for the chosen room and dates. The room is no longer available to others for these dates. Payment handled as decided (see Q2). |
 
@@ -22,7 +22,7 @@
 3. → Guest enters his details (which data: see Q6).
 4. → Guest chooses to pay and enters payment data.
 5. ← System sends the payment to the Payment Provider, which confirms it.
-6. ← System reserves the room for these dates (booking status: see Q4).
+6. ← System confirms the booking instantly (D-06).
 7. ← System shows a confirmation and sends a receipt to the guest.
 
 **Alternate flow A — Payment fails** (branches at step 5)
@@ -76,30 +76,36 @@
 - C1. → Owner chooses to cancel a guest's booking.
 - C2. ← System sets the booking to cancelled, informs the guest and refunds the full amount.
 
-## UC-03 — Accept or decline a booking request
+## UC-03 — Change a booking
 
 | Field | |
 |---|---|
 | Related requirements | *(filled in the Lab 1 report)* |
-| Initiating actor | Owner |
-| Actor's goal | Decide who stays in their hotel |
-| Participating actors | Guest (gets informed), Payment Provider (refund if declined) |
-| Preconditions | A guest has sent a booking request that is still open (only if bookings need owner approval, see Q4). |
-| Postconditions | The request is accepted (booking confirmed) or declined (guest informed, any payment refunded). |
+| Initiating actor | Guest |
+| Actor's goal | Move the stay to other dates or another room without cancelling |
+| Participating actors | Payment Provider (price difference), Owner (informed) |
+| Preconditions | The guest has a confirmed booking whose stay has not yet started. |
+| Postconditions | The booking shows the new dates/room. The old dates are available again. Any price difference is paid or refunded. |
 
 **Main success scenario**
 
-1. ← System notifies the owner about a new booking request.
-2. → Owner opens the request and sees the guest, room and dates.
-3. → Owner accepts the request.
-4. ← System confirms the booking and informs the guest.
+1. → Guest opens his booking and chooses to change it.
+2. → Guest enters the new dates or picks another room.
+3. ← System checks that the new dates are available and shows the new total price and the difference.
+4. → Guest confirms the change.
+5. ← System charges or refunds the difference via the Payment Provider.
+6. ← System updates the booking, frees the old dates, informs the Owner and sends the guest a confirmation.
 
-**Alternate flow A — Owner declines** (branches at step 3)
+**Alternate flow A — New dates not available** (branches at step 3)
 
-- 3a. → Owner declines the request.
-- 3b. ← System informs the guest and asks the Payment Provider to refund the payment.
+- 3a. ← System informs the guest that the new dates or room are not available.
+- 3b. → Guest picks other dates (continue at step 2) or keeps the old booking unchanged.
 
-**Alternate flow B — Owner does not respond** (branches at step 2)
+**Alternate flow B — Payment of the difference fails** (branches at step 5)
 
-- 2a. Owner does not open or answer the request.
-- 2b. ← The request stays open and the guest keeps waiting for a decision (response deadline: see Q4).
+- 5a. ← Payment Provider declines the payment.
+- 5b. ← System keeps the old booking unchanged and informs the guest.
+
+**Alternate flow C — Change close to arrival** (branches at step 1)
+
+- 1a. ← System applies the rule for late changes (see Q15).
