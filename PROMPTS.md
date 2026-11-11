@@ -33,6 +33,18 @@ Follow-up prompts in the same session, while Jan was still in the room:
 
 **Kept / changed / rejected, and why:** Kept the table after checking every row against our notes. Claude pointed out unclear decisions (cancellation deadline, room changes, data retention, search time); we asked Jan about them in the session and added his answers.
 
+### 2026-11-10 — Claude — Urbee
+
+**Goal:** Plan the Lab 1 report and draft requirements.md (functional and non-functional requirements, traceability matrix) and the reference app analysis.
+
+**Prompt:**
+> lets do the lab report now
+>
+> The way you have answered looks really complicated to me. Can you tell me and explain me everything in step by step? […]
+>
+> now can u do the lab report
+
+**Kept / changed / rejected, and why:** Kept the structure and the requirements after checking each one against our use cases and the decision log. Kept the open points instead of inventing targets where Jan gave no number.
 
 ### 2026-11-11 — Claude — Urbee
 
@@ -63,6 +75,14 @@ Follow-up prompts in the same session, while Jan was still in the room:
 
 **Kept / changed / rejected, and why:** Set up Java 21 and ran the app myself in IntelliJ and took all six screenshots myself. Claude wrote the picture captions in reference-app-lab1.md, which I checked against what I saw in the app.
 
+### 2026-11-11 — Claude — Urbee
+
+**Goal:** Remove the obsolete use case from our use case diagram.
+
+**Prompt:**
+> How can I fix the image and from where I will get the correct image if I want to update the image actually?
+
+**Kept / changed / rejected, and why:** Claude removed the bubble "A/D a booking request" and its line from our existing diagram image, because D-06 dropped owner approval. Everything else in the diagram is unchanged; I checked the new image before uploading it.
 ## Lab 2
 
 ## Lab 3
