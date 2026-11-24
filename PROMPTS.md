@@ -90,7 +90,7 @@ Follow-up prompts in the same session, while Jan was still in the room:
 **Prompt:**
 > [pasted the lecturer's feedback and uploaded our repository] my professor reviewed and gave me some feedbacks, Please review this and make the necessary changes
 
-**Kept / changed / rejected, and why:** Claude entered the decisions the lecturer stated in the feedback into decision-log.md (D-01, D-03, D-04, D-05, D-08, D-09, D-13 to D-17, new D-23, D-24), use-cases.md and requirements.md (UC IDs as sources, NFR-01, NFR-03, NFR-04, NFR-07, AC-11.2, AC-17.2, new FR-25 and Q16). It rebuilt our use case diagram with IDs on every use case and the Payment Provider linked to UC-01, UC-02 and UC-03, and made the AI marker in reference-app-lab1.md match this log. I wrote the new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 myself; Claude only checked them.
+**Kept / changed / rejected, and why:** Claude entered the decisions the lecturer stated in the feedback into decision-log.md (D-01, D-03, D-04, D-05, D-08, D-09, D-13 to D-17, new D-23, D-24), use-cases.md and requirements.md (UC IDs as sources, NFR-01, NFR-03, NFR-04, NFR-07, AC-11.2, AC-17.2, new FR-25 and Q16). It rebuilt our use case diagram with IDs on every use case and the Payment Provider linked to UC-01, UC-02 and UC-03, and made the AI marker in reference-app-lab1.md match this log. The new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 are left as placeholders; I will write them myself before Lab 4.
 
 ## Lab 2
 

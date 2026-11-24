@@ -4,7 +4,7 @@
 >
 > Reviewed by Urbee — checked every requirement against our use cases and our session notes.
 >
-> AI-assisted (Claude): on 24.11 Claude entered the corrections from our lecturer's feedback (use case IDs as sources, decided numbers in NFR-01, NFR-03, NFR-04, NFR-07, late-cancellation cost in AC-11.2, support call in AC-17.2, FR-25). The new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 were written by Krish.
+> AI-assisted (Claude): on 24.11 Claude entered the corrections from our lecturer's feedback (use case IDs as sources, decided numbers in NFR-01, NFR-03, NFR-04, NFR-07, late-cancellation cost in AC-11.2, support call in AC-17.2, FR-25). The new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 are still to be written by Krish (before Lab 4).
 
 ## 1. Introduction
 
