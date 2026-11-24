@@ -93,7 +93,14 @@ Follow-up prompts in the same session, while Jan was still in the room:
 **Kept / changed / rejected, and why:** Claude entered the decisions the lecturer stated in the feedback into decision-log.md (D-01, D-03, D-04, D-05, D-08, D-09, D-13 to D-17, new D-23, D-24), use-cases.md and requirements.md (UC IDs as sources, NFR-01, NFR-03, NFR-04, NFR-07, AC-11.2, AC-17.2, new FR-25 and Q16). It rebuilt our use case diagram with IDs on every use case and the Payment Provider linked to UC-01, UC-02 and UC-03, and made the AI marker in reference-app-lab1.md match this log. The new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 are left as placeholders; I will write them myself before Lab 4.
 
 ## Lab 2
+### 2026-11-24 — Claude — Krish
 
+**Goal:** Coaching for the Lab 2 preparation (domain model, four lists, sequence diagram).
+
+**Prompt:**
+> Guide me through the lab [uploaded the Lab 2 sheet] — then step-by-step coaching
+
+**Kept / changed / rejected, and why:** Claude offered options for concepts, associations, multiplicities, attributes, invariants, responsibilities, lifelines and messages; I picked them and changed several after its feedback (removed HotelManager, removed date of birth, moved two invariants from Hotel to Cancellation and Review, chose UC-01 for the sequence diagram). Claude formatted my choices into domain-model.md, typed the concept boxes into a draw.io starter file, added the multiplicity labels from my association table, and made an empty skeleton (lifelines, alt frame) for the sequence diagram. I drew the associations in the domain model and all messages in the sequence diagram myself.
 ## Lab 3
 
 ## Lab 4
