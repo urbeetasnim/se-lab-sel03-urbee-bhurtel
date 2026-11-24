@@ -1,8 +1,8 @@
 # Reference App — Requirements (Lab 1)
 
-> AI-assisted (Claude): drafted the comparison against our requirements and located the evidence in the reference app's source code.
+> AI-assisted (Claude): drafted the comparison against our requirements and located the evidence in the reference app's source code (10.11), and wrote the picture captions (11.11).
 >
-> Reviewed by Urbee — ran the app, checked each claim against our requirements and added the screenshots.
+> Done by Urbee: ran the app, took all six screenshots, and checked each claim and caption against our requirements and the running app.
 
 We ran StayHub, the reference app, on our computer (`./mvnw spring-boot:run`, demo logins `guest@stayhub.test` and `owner@stayhub.test`) and compared it with our requirements in [requirements.md](../requirements/requirements.md). As evidence we give screenshots and the file or class in the reference app's source code; paths are relative to `src/main/java/com/stayhub/`.
 

@@ -3,6 +3,8 @@
 > AI-assisted (Claude): Claude coached by asking questions and offering multiple-choice options; it formatted my chosen answers into the template. Actors, use cases, flows and choices decided by Krish.
 >
 > AI-assisted (Claude): after the stakeholder session, Claude updated the use cases with the decisions from the decision log, replaced UC-03 (owner approval was dropped by D-06) with "Change a booking", and filled in the related requirements. Reviewed by Urbee — checked every change against the decision log.
+>
+> AI-assisted (Claude): on 24.11 Claude entered the corrections from our lecturer's feedback (late-cancellation cost, owner's reason and support call, payment methods, booked price) with the decision numbers.
 
 ![Use case diagram](use-case-diagram.png)
 
@@ -15,14 +17,14 @@
 | Actor's goal | Secure a room in a hotel for the chosen dates |
 | Participating actors | Payment Provider |
 | Preconditions | The hotel and its rooms are offered on the platform. The guest has found a room (UC Search for a room). |
-| Postconditions | A confirmed booking with a fixed room number exists for the guest's dates (D-06, D-21). The guest has paid online (D-03). The room is no longer available to others for these dates (D-07). |
+| Postconditions | A confirmed booking with a fixed room number exists for the guest's dates (D-06, D-21). The booking keeps the price it was booked at, even if the owner changes the price later (D-09). The guest has paid online (D-03). The room is no longer available to others for these dates (D-07). |
 
 **Main success scenario**
 
 1. → Guest selects a suitable room and the stay dates (arrival and departure).
 2. ← System shows the room details (Wi-Fi, parking, …) and the total price including all taxes and fees.
 3. → Guest enters first name, last name and email address, and optionally a phone number (D-08).
-4. → Guest chooses to pay online and enters payment data (D-03).
+4. → Guest chooses to pay online by credit card or PayPal and enters payment data (D-03).
 5. ← System sends the payment to the Payment Provider, which confirms it.
 6. ← System confirms the booking immediately and assigns a fixed room number (D-06, D-21).
 7. ← System shows the confirmation and sends a receipt to the guest.
@@ -46,12 +48,12 @@
 
 | Field | |
 |---|---|
-| Related requirements | FR-11, FR-12, FR-17, FR-18 |
+| Related requirements | FR-11, FR-12, FR-17, FR-18, FR-25 |
 | Initiating actor | Guest |
 | Actor's goal | Call off the booking and get back as much money as the rules allow |
 | Participating actors | Payment Provider, Owner |
 | Preconditions | The guest has a confirmed booking whose stay has not yet started. |
-| Postconditions | The booking is cancelled. The room is available for other guests again for these dates. Money is refunded according to the cancellation rule (D-01). |
+| Postconditions | The booking is cancelled. The room is available for other guests again for these dates. The full amount is refunded, or for a late cancellation the amount minus the first night (D-01). |
 
 **Main success scenario**
 
@@ -65,8 +67,8 @@
 
 **Alternate flow A — Late cancellation** (branches at step 2)
 
-- 2a. ← System shows that free cancellation is no longer possible because the arrival is less than 48 hours away (D-01). No exception is made, not even for illness (D-02). How much is charged then is still open (Q1).
-- 2b. → Guest confirms anyway (continue at step 3) or aborts; the booking stays confirmed.
+- 2a. ← System shows that free cancellation is no longer possible because the arrival is less than 48 hours away (D-01). No exception is made, not even for illness (D-02). System shows that the first night is charged and the rest is refunded (D-01).
+- 2b. → Guest confirms anyway (continue at step 3; at step 5 the system refunds the amount minus the first night) or aborts; the booking stays confirmed.
 
 **Alternate flow B — Refund fails** (branches at step 5)
 
@@ -75,9 +77,9 @@
 
 **Alternate flow C — Owner cancels the booking** (initiated by Owner)
 
-- C1. → Owner chooses to cancel a guest's booking at least 14 days before the arrival date (D-04).
-- C2. ← System sets the booking to cancelled, informs the guest and refunds the full amount, without any upper limit (D-05, D-10).
-- C3. ← If the arrival is less than 14 days away, the system rejects the owner's cancellation; the booking stays confirmed (D-04).
+- C1. → Owner chooses to cancel a guest's booking more than 14 days before the arrival date and enters a reason (D-04).
+- C2. ← System sets the booking to cancelled, informs the guest automatically and refunds the full amount, without any upper limit (D-05, D-10).
+- C3. ← If the arrival is 14 days or less away, the system does not let the owner cancel and tells the owner to call Kojenwerk support; the booking stays confirmed (D-04).
 
 ## UC-03 — Change a booking
 

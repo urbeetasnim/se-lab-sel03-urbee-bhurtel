@@ -44,7 +44,7 @@ Follow-up prompts in the same session, while Jan was still in the room:
 >
 > now can u do the lab report
 
-**Kept / changed / rejected, and why:** Kept the structure and the requirements after checking each one against our use cases and the decision log. Kept the open points instead of inventing targets where Jan gave no number.
+**Kept / changed / rejected, and why:** Kept the structure and the requirements after checking each one against our use cases and the decision log. Kept the open points instead of inventing targets where Jan gave no number. Claude also drafted the comparison in reference-app-lab1.md and located the evidence in the reference app's source code; Urbee checked each claim later against the running app (see 11.11).
 
 ### 2026-11-11 — Claude — Urbee
 
@@ -73,7 +73,7 @@ Follow-up prompts in the same session, while Jan was still in the room:
 **Prompt:**
 > could you please guide me for running the app and add the screenshots, because I want to add this […]
 
-**Kept / changed / rejected, and why:** Set up Java 21 and ran the app myself in IntelliJ and took all six screenshots myself. Claude wrote the picture captions in reference-app-lab1.md, which I checked against what I saw in the app.
+**Kept / changed / rejected, and why:** Set up Java 21 and ran the app myself in IntelliJ and took all six screenshots myself. In this session Claude only wrote the picture captions in reference-app-lab1.md, which I checked against what I saw in the app. The comparison text itself had been drafted by Claude on 10.11 (see that entry).
 
 ### 2026-11-11 — Claude — Urbee
 
@@ -83,6 +83,15 @@ Follow-up prompts in the same session, while Jan was still in the room:
 > How can I fix the image and from where I will get the correct image if I want to update the image actually?
 
 **Kept / changed / rejected, and why:** Claude removed the bubble "A/D a booking request" and its line from our existing diagram image, because D-06 dropped owner approval. Everything else in the diagram is unchanged; I checked the new image before uploading it.
+### 2026-11-24 — Claude — Krish
+
+**Goal:** Apply our lecturer's feedback on the Lab 1 report.
+
+**Prompt:**
+> [pasted the lecturer's feedback and uploaded our repository] my professor reviewed and gave me some feedbacks, Please review this and make the necessary changes
+
+**Kept / changed / rejected, and why:** Claude entered the decisions the lecturer stated in the feedback into decision-log.md (D-01, D-03, D-04, D-05, D-08, D-09, D-13 to D-17, new D-23, D-24), use-cases.md and requirements.md (UC IDs as sources, NFR-01, NFR-03, NFR-04, NFR-07, AC-11.2, AC-17.2, new FR-25 and Q16). It rebuilt our use case diagram with IDs on every use case and the Payment Provider linked to UC-01, UC-02 and UC-03, and made the AI marker in reference-app-lab1.md match this log. I wrote the new non-happy-path criteria AC-04.3, AC-16.3, AC-18.3 and the criteria of FR-25 myself; Claude only checked them.
+
 ## Lab 2
 
 ## Lab 3
