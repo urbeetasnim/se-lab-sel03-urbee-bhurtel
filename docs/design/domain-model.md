@@ -20,7 +20,7 @@ Save the diagram as docs/design/domain-model.png.
 | Price/Rate | Amount per night, valid from, valid to | Gives the price per night for a date | UC-07, FR-09, FR-19 |
 | Owner | Name, email; the hotels they run | Manages hotels, rooms and prices; can cancel bookings | UC-06, UC-07, FR-17, FR-20 |
 | Guest | First name, last name, email, phone (optional); their bookings and reviews | Books, changes and cancels bookings; writes reviews | UC-01, FR-03, FR-10 |
-| Booking | Arrival date, departure date, booked price per night, status; its guest, room, payments, invoice and cancellation | Checks its dates and keeps its price; can be confirmed, changed or cancelled | UC-01, UC-02, UC-03, FR-03 to FR-09 |
+| Booking | Arrival date, departure date, booked price per night, status; its guest, room, payments, invoice and cancellation | Checks its dates and keeps its price; can be confirmed, changed or cancelled, roomNumber | UC-01, UC-02, UC-03, FR-03 to FR-09 |
 | Payment | Amount, method, paid at | Records that money was paid | UC-01, UC-03, FR-05, FR-14 |
 | Refund | Amount, status | Records money going back to the guest | UC-02, FR-11, FR-18 |
 | Cancellation | Cancelled at, cancelled by, reason, fee | Calculates the fee and decides whether the cancellation is allowed | UC-02, FR-11, FR-12, FR-17, FR-25 |
