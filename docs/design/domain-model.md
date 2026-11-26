@@ -40,6 +40,8 @@ Save the diagram as docs/design/domain-model.png.
 | Booking | Room | 0..* — 1 | A booking is for exactly one room (D-21) |
 | Booking | Payment | 1 — 1..* | A booking has one or more payments (first payment, price difference after a change, D-19) |
 | Booking | Cancellation | 1 — 0..1 | A booking is cancelled at most once |
+| Owner | Cancellation | 0..1 — 0..* | An owner makes zero or more cancellations; a cancellation is made by at most one owner, because guests can cancel too (D-04) |
+| Guest | Cancellation | 0..1 — 0..* | A guest makes zero or more cancellations; a cancellation is made by at most one guest, because owners can cancel too (D-01) |
 | Cancellation | Refund | 1 — 0..1 | A cancellation leads to at most one refund |
 | Guest | Review | 1 — 0..* | A guest writes zero or more reviews |
 | Review | Hotel | 0..* — 1 | A review is about exactly one hotel |
